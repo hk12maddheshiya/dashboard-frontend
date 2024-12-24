@@ -26,7 +26,7 @@ function App() {
   useEffect(() => {
     const fetchStudentData = async () => {
       try {
-        const backendUrl = 'http://localhost:3000/students'; // Your deployed backend URL
+        const backendUrl = 'https://dashboard-project-backend.onrender.com/students'; // Your deployed backend URL
         const url = selectedClass
           ? `${backendUrl}?class=${encodeURIComponent(selectedClass)}`
           : `${backendUrl}`;
@@ -87,7 +87,7 @@ function App() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/students', {
+      const response = await fetch('https://dashboard-project-backend.onrender.com/students', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
