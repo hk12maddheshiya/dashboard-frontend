@@ -35,7 +35,7 @@ export function StudentTable({
       try {
         // URL to fetch students filtered by class
         const url = selectedClass
-          ? `http://localhost:3000/students?class=${encodeURIComponent(selectedClass)}`
+          ? `https://dashboard-project-backend.onrender.com/students?class=${encodeURIComponent(selectedClass)}`
           : 'http://localhost:3000/students';
 
         const response = await fetch(url);
@@ -79,7 +79,7 @@ export function StudentTable({
   const addStudent = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/students', {
+      const response = await fetch('https://dashboard-project-backend.onrender.com/students', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
